@@ -1,0 +1,30 @@
+# config.yaml
+ibex35:
+  periodo: "1y"
+  empresas:
+    Santander: "SAN.MC"
+    BBVA: "BBVA.MC"
+    Inditex: "ITX.MC"
+    Telefónica: "TEF.MC"
+    Repsol: "REP.MC"
+    Iberdrola: "IBE.MC"
+    CaixaBank: "CABK.MC"
+    Amadeus: "AMS.MC"
+    ACS: "ACS.MC"
+    Ferrovial: "FER.MC"
+    Naturgy: "NTGY.MC"
+    Endesa: "ELE.MC"
+    Mapfre: "MAP.MC"
+    Acciona: "ANA.MC"
+
+alertas:
+  umbral_caida: 3.0
+  umbral_subida: 3.0
+
+reportes:
+  carpeta_salida: "reports"
+  dpi_graficos: 150
+
+ia:
+  proveedor: "openai"   # o "gemini"
+  modelo: "gpt-4o-mini"
