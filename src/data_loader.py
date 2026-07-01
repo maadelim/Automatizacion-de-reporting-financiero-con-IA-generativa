@@ -106,3 +106,5 @@ def obtener_resumen(datos: dict[str, pd.DataFrame]) -> pd.DataFrame:
             logger.error(f"Error procesando resumen de {nombre}: {exc}")
 
     return pd.DataFrame(resumen)
+
+EMPRESAS = cargar_config()["ibex35"]["empresas"]
