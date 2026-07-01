@@ -74,6 +74,24 @@ Ejecutar los 18 tests unitarios:
 pytest tests/ -v
 ```
 
+## 🐳 Uso con Docker
+
+Construir imagen:
+```bash
+docker build -t ibex35-reporter .
+```
+
+Ejecutar dashboard:
+```bash
+docker run -p 8501:8501 -e GEMINI_API_KEY=tu_clave ibex35-reporter
+```
+
+Generar reporte PDF:
+```bash
+docker run -e GEMINI_API_KEY=tu_clave -v $(pwd)/reports:/app/reports \
+  ibex35-reporter python main.py
+```
+
 ---
 
 ## 📁 Estructura del Proyecto

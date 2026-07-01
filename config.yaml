@@ -16,6 +16,27 @@ ibex35:
     Endesa: "ELE.MC"
     Mapfre: "MAP.MC"
     Acciona: "ANA.MC"
+    Solaria: "SLR.MC"
+    Fluidra: "FDR.MC"
+    Grifols: "GRF.MC"
+    IAG: "IAG.MC"
+    ArcelorMittal: "MTS.MC"
+    Meliá: "MEL.MC"
+    Sacyr: "SCYR.MC"
+    Bankinter: "BKT.MC"
+    Colonial: "COL.MC"
+    Logista: "LOG.MC"
+    Aena: "AENA.MC"
+    Redeia: "REE.MC"
+    Enagas: "ENG.MC"
+    PharmaMar: "PHM.MC"
+    Unicaja: "UNI.MC"
+    Indra: "IDR.MC"
+    Viscofan: "VIS.MC"
+    Laboratorios Rovi: "ROVI.MC"
+    Cellnex: "CLNX.MC"
+    Puig: "PUIG.MC"
+    Línea Directa: "LDA.MC"
 
 alertas:
   umbral_caida: 3.0
@@ -26,5 +47,4 @@ reportes:
   dpi_graficos: 150
 
 ia:
-  proveedor: "openai"   # o "gemini"
-  modelo: "gpt-4o-mini"
+  modelo: "gemini-1.5-flash"
