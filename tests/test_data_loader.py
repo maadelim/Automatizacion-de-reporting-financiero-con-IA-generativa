@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import pandas as pd
 import numpy as np
-import pytest
 from unittest.mock import patch
 from src.data_loader import descargar_datos, obtener_resumen
 
