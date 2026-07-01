@@ -5,8 +5,7 @@ from __future__ import annotations
 import pandas as pd
 import numpy as np
 import pytest
-from unittest.mock import patch, MagicMock
-from src.data_loader import descargar_datos, obtener_resumen
+from unittest.mock import patch
 
 N = 60
 FECHAS = pd.date_range("2024-01-01", periods=N, freq="B")
@@ -25,7 +24,6 @@ CONFIG_MOCK = {
     "alertas": {"umbral_caida": 3.0, "umbral_subida": 3.0},
     "reportes": {"carpeta_salida": "reports", "dpi_graficos": 100},
 }
-
 
 class TestDescargarDatos:
 
