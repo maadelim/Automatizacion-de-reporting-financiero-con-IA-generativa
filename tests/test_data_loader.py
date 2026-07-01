@@ -6,16 +6,17 @@ import pandas as pd
 import numpy as np
 import pytest
 from unittest.mock import patch
+from src.data_loader import descargar_datos, obtener_resumen
 
 N = 60
 FECHAS = pd.date_range("2024-01-01", periods=N, freq="B")
 PRECIOS = np.linspace(10, 12, N)
 
 DF_MOCK = pd.DataFrame({
-    "Open":   PRECIOS * 0.99,
-    "High":   PRECIOS * 1.02,
-    "Low":    PRECIOS * 0.98,
-    "Close":  PRECIOS,
+    "Open": PRECIOS * 0.99,
+    "High": PRECIOS * 1.02,
+    "Low": PRECIOS * 0.98,
+    "Close": PRECIOS,
     "Volume": [500_000] * N,
 }, index=FECHAS)
 
@@ -24,6 +25,7 @@ CONFIG_MOCK = {
     "alertas": {"umbral_caida": 3.0, "umbral_subida": 3.0},
     "reportes": {"carpeta_salida": "reports", "dpi_graficos": 100},
 }
+
 
 class TestDescargarDatos:
 
@@ -74,7 +76,9 @@ class TestObtenerResumen:
     def test_variacion_calculada_correctamente(self):
         datos = {"TestEmpresa": DF_MOCK}
         resultado = obtener_resumen(datos)
-        variacion = resultado.loc[resultado["Empresa"] == "TestEmpresa", "Variación (%)"].values[0]
+        variacion = resultado.loc[
+            resultado["Empresa"] == "TestEmpresa", "Variación (%)"
+        ].values[0]
         assert isinstance(variacion, float)
 
     def test_dict_vacio_retorna_df_vacio(self):
